@@ -1,0 +1,105 @@
+package com.lh.common.tests;
+
+import org.openqa.selenium.WebDriver;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+
+import com.lh.base.TestBaseSetup;
+import com.lh.common.pageobjects.BasePageTomcat;
+//import com.lh.common.pageobjects.CreateAccountPageTomcat;
+import com.lh.common.pageobjects.SignInPageTomcat;
+import com.lh.common.pageobjects.MyActivitiesPageTomcat;
+
+import lh.com.utility.Log;
+
+public class MyActivitiesPageTomcatTest extends TestBaseSetup {
+	private WebDriver driver;
+	private SignInPageTomcat signInPageTomcat;
+	private BasePageTomcat basePageTomcat;
+	private MyActivitiesPageTomcat myActivitiesPageTomcat;
+	
+	//private CreateAccountPageTomcat createAccountPageTomcat;
+		
+		@BeforeClass
+		public void setUp() {
+			driver=getDriver();
+			
+			Log.startTestCase("MyActivitiesPageTomcat");
+			
+		}
+		
+		@AfterClass
+		public void setDown() {
+						
+			Log.endTestCase("MyActivitiesPageTomcat");
+			
+		}
+		
+		
+		@Test
+		public void verifyMyActivitiesPage() {
+			Log.info("MyActivities Page tests BEGIN...");
+			basePageTomcat = new BasePageTomcat(driver);
+			signInPageTomcat = new SignInPageTomcat(driver);
+			myActivitiesPageTomcat	= new MyActivitiesPageTomcat(driver);
+			
+			//signInPageTomcat = basePageTomcat.clickSignInBtn();
+			//myActivitiesPagePageTomcat = basePageTomcat.clickSignInBtn();
+			//createAccountPage = signInPage.clickonCreateAnAccount();
+			
+			Log.info("Sign In Page functionality details...");
+			//basePageTomcat = new BasePageTomcat(driver);
+			Log.info("verify SignIn (1)");
+			//signInPageTomcat = basePageTomcat.clickSignInBtn();
+			Log.info("Verify SignIn (2)");
+			Assert.assertTrue(signInPageTomcat.verifySignInPageTitle(), "Sign In page title doesn't match");
+			Log.info("Assert (1)");
+			Assert.assertTrue(signInPageTomcat.verifySignInPageText(), "Page text not matching");
+			Log.info("Assert (2)");
+			Assert.assertTrue(signInPageTomcat.verifySignIn(), "Unable to sign in");
+			Log.info("Assert (3)");
+			
+			Log.info("My Activities Page Functions begin here..");
+						
+			Assert.assertTrue(myActivitiesPageTomcat.verifyMyActivitiesPageTomcatTitle(), "Page title not matching");
+			Log.info("Assert (4)");
+			Assert.assertTrue(myActivitiesPageTomcat.verifyMyActivitiesPageTomcatText(), "Page text not matching");
+			Log.info("Assert (5)");
+			Assert.assertTrue(myActivitiesPageTomcat.verifyMyActivitiesPageAccountProfileLink(), "Page link not found");
+			Log.info("Assert (6)");
+			Assert.assertTrue(myActivitiesPageTomcat.verifyMyActivitiesPageHomeLink(), "Page home link not found");
+			Log.info("Assert (7)");
+			Assert.assertTrue(myActivitiesPageTomcat.verifyMyActivitiesPageNewLodgementLink(), "Page new lodgement link not found");
+			Log.info("Assert (8)");
+			Assert.assertTrue(myActivitiesPageTomcat.verifyMyActivitiesPageLogoutButton(), "Page Logout button link not found");
+			Log.info("Assert (9)");
+			
+		}
+		
+			@Test
+			public void myActvitiesPageLogout() {
+			String userName = myActivitiesPageTomcat.getMyActivitiesPageUsernameText();
+			Log.info("My Activities Page UserName is " + userName + ".");
+			myActivitiesPageTomcat.clickOnLogoutButton();
+			Log.info("My Activities Page logout button clicked.");
+			
+			}
+			
+			
+			
+			
+			
+		
+		
+		
+		
+
+		
+		public void verifyMyActivitiesFunctions() {
+			
+		}
+
+}

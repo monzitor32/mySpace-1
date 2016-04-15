@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Portal 2 Tomcat 2 Test]">
+  <parameter name="appURL" value="https://ws-tomcat-test.custman.com.au:8443/"/>
+  <parameter name="browserType" value="firefox"/>
+  <test name="Portal2 Tomcat 2 Test Run(failed)">
+    <classes>
+      <class name="com.lh.common.tests.NewLodgementPageTomcatTest">
+        <methods>
+          <include name="setDown"/>
+          <include name="verifyNewLodgementPageTitle"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.lh.common.tests.NewLodgementPageTomcatTest -->
+    </classes>
+  </test> <!-- Portal2 Tomcat 2 Test Run(failed) -->
+</suite> <!-- Failed suite [Portal 2 Tomcat 2 Test] -->

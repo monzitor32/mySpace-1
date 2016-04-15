@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Page Object test example]">
+  <parameter name="appURL" value="https://ws-tomcat-test.custman.com.au:8445/"/>
+  <parameter name="browserType" value="firefox"/>
+  <test name="sample test(failed)">
+    <classes>
+      <class name="com.lh.common.tests.MyActivitiesPageTomcatTest">
+        <methods>
+          <include name="verifyMyActivitiesPage"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.lh.common.tests.MyActivitiesPageTomcatTest -->
+    </classes>
+  </test> <!-- sample test(failed) -->
+</suite> <!-- Failed suite [Page Object test example] -->

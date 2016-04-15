@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Page Object test example">
+<parameter name="appURL" value="https://ws-tomcat-test.custman.com.au:8445/"/>
+<parameter name="browserType" value="firefox"/>
+  <test name="sample test">
+    <classes>
+    
+    	<class name="com.lh.common.tests.BasePageTomcatTest"/>
+<!--    	<class name="com.lh.common.tests.BasePageTest"/>
+		<class name="com.lh.common.tests.SignInPageTest"/>
+		<class name="com.lh.common.tests.CreateAccountPageTest"/>
+-->
+    </classes>
+  </test>
+</suite>

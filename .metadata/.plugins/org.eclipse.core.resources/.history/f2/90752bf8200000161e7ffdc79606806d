@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Portal 2 Tomcat 2 Test">
+<parameter name="appURL" value="https://ws-tomcat-test.custman.com.au:8443/"/>
+<parameter name="browserType" value="firefox"/>
+  <test name="Portal2 Tomcat 2 Test Run">
+    <classes>
+    
+<!--    
+    	<class name="com.lh.common.tests.BasePageTomcatTest"/>
+    	<class name="com.lh.common.tests.SignInPageTomcatTest"/>
+    	<class name="com.lh.common.tests.MyActivitiesPageTomcatTest"/>
+    	
+    	
+-->    	
+
+    	
+    	    	<class name="com.lh.common.tests.AccountProfilePageTomcatTest"/>
+
+    	
+<!--
+    	<class name="com.lh.common.tests.BasePageTest"/>
+		<class name="com.lh.common.tests.SignInPageTest"/>
+		<class name="com.lh.common.tests.CreateAccountPageTest"/>
+		
+		
+		
+		TOMCAT2
+		https://ws-tomcat-test.custman.com.au:8445/
+		
+		TOMCAT3
+		https://ws-tomcat-test.custman.com.au:8447/
+		
+		TOMCAT 1
+		https://ws-tomcat-test.custman.com.au:8443/
+		
+-->
+    </classes>
+  </test>
+</suite>
