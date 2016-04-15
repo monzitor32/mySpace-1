@@ -10,8 +10,6 @@
     	
     	Changes:
     	saturday-160416 : started git in master opened eclipse and then created the new branch and made changes in eclipse.
-    	saturday-160416-A : merged above changes into master, pushed and created this.branch.
-    						make these changes and  push them to master.
     	
     	
     	<class name="com.lh.common.tests.BasePageTomcatTest"/>
