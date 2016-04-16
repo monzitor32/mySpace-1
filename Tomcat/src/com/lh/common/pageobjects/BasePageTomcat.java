@@ -1,20 +1,24 @@
 package com.lh.common.pageobjects;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class BasePageTomcat {
+	
 	protected WebDriver driver;
 	//private By signInButton = By.linkText("Sign in");
 	private By usernameText = By.xpath("//td[contains(.,'Username:')]");
-	private By homeLink = By.xpath("//span[@id='HomeMenuText']");
-	private By helpLink = By.xpath("//a[contains(.,'Help')]");
-	private By resetPasswordLink = By.xpath("//a[contains(.,'Reset Password')]");
-	private By createAccountLink = By.xpath("//a[contains(.,'Create Account')]");
-	private By loginLink = By.xpath("//input[@type='submit']");
-	private By welcometoPortalText = By.xpath("//h3[contains(.,'Welcome to Portal')]");
-	private By navigatePortalText = By.xpath("//span[@id='specTitle']");
+	//private By homeLink = By.xpath("//span[@id='HomeMenuText']");
+	//private By helpLink = By.xpath("//a[contains(.,'Help')]");
+	//private By resetPasswordLink = By.xpath("//a[contains(.,'Reset Password')]");
+	//private By createAccountLink = By.xpath("//a[contains(.,'Create Account')]");
+	//private By loginLink = By.xpath("//input[@type='submit']");
+	//private By welcometoPortalText = By.xpath("//h3[contains(.,'Welcome to Portal')]");
+	//private By navigatePortalText = By.xpath("//span[@id='specTitle']");
 	private By signInButton = By.xpath("//input[@type='submit']");
 	
 	// added from signin
@@ -22,10 +26,29 @@ public class BasePageTomcat {
 	private	By passwordLoginBox = By.xpath("//input[@id='j_password']");
 	private	By loginButton = By.xpath("//input[@type='submit']");
 	
+	@FindBy (xpath = "//span[@id='HomeMenuText']")
+	private WebElement homeLink;
+	@FindBy (xpath = "//a[contains(.,'Help')]")
+	private WebElement helpLink;
+	@FindBy (xpath = "//a[contains(.,'Reset Password')]")
+	private WebElement resetPasswordLink;
+	@FindBy (xpath = "//a[contains(.,'Create Account')]")
+	private WebElement createAccountLink;
+	@FindBy (xpath = "//input[@type='submit']")
+	private WebElement loginLink;
+	@FindBy (xpath = "//h3[contains(.,'Welcome to Portal')]")
+	private WebElement welcometoPortalText;
+	@FindBy (xpath = "//span[@id='specTitle']")
+	private WebElement navigatePortalText;
+	@FindBy (xpath = "//input[@type='submit']")
+	private WebElement basePageSubmitButton;
+	
+	static String basePageTitle = "Welcome to Portal";
 	
 	
 	public BasePageTomcat(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 	//original start
@@ -64,60 +87,42 @@ public class BasePageTomcat {
 		return title;
 	}
 	
-	public boolean verifyBasePageTitle() {
-		String expectedPageTitle="Welcome to Portal";
-		System.out.println("basePageTomcat verifyBasePageTitle is " + getPageTitle());
-		return getPageTitle().contains(expectedPageTitle);
+	public void verifyBasePageTitle() {
+		System.out.println(basePageTitle + "====" + driver.getTitle());
+		Assert.assertEquals(basePageTitle, driver.getTitle());
+	}	
+	
+	public void verifyBasePageHomeLink() {
+		//WebElement element = driver.findElement(homeLink);
+		Assert.assertTrue(homeLink.isDisplayed()||homeLink.isEnabled());
 	}
 	
-
-	public boolean verifyBasePageHomeLink() {
-		WebElement element = driver.findElement(homeLink);
-		return (element.isDisplayed()||element.isEnabled());
+	public void verifyBasePageHelpLink() {
+		Assert.assertTrue(helpLink.isDisplayed()||helpLink.isEnabled());
 	}
 	
-	public boolean verifyBasePageHelpLink() {
-		System.out.println("verifyBasePsgeHelpLink.1");
-		WebElement element = driver.findElement(helpLink);
-		System.out.println("verifyBasePageHelpLink.2");
-		return (element.isDisplayed()||element.isEnabled());
+	public void verifyBasePageResetPasswordLink() {
+		Assert.assertTrue(resetPasswordLink.isDisplayed()||resetPasswordLink.isEnabled());
 	}
 	
-	public boolean verifyBasePageResetPasswordLink() {
-		System.out.println("verifyBasePageResetPasswordLink.1");
-		WebElement element = driver.findElement(resetPasswordLink);
-		System.out.println("verifyBasePageResetPasswordLink.2");
-		return (element.isDisplayed()||element.isEnabled());
+	public void verifyBasePageCreateAccountLink() {
+		Assert.assertTrue(createAccountLink.isDisplayed()||createAccountLink.isEnabled());
+	}
+		
+	public void verifyBasePageLoginLink() {
+		Assert.assertTrue(loginLink.isDisplayed()||loginLink.isEnabled());
 	}
 	
-	public boolean verifyBasePageCreateAccountLink() {
-		System.out.println("verifyBasePageCreateAccountLink.1");
-		WebElement element = driver.findElement(createAccountLink);
-		System.out.println("verifyBasePageCreateAccountLink.2");
-		return (element.isDisplayed()||element.isEnabled());
+	public void verifyBasePageWelcomeToPortalText() {
+		Assert.assertTrue(welcometoPortalText.isDisplayed()||welcometoPortalText.isEnabled());
 	}
 	
-	
-	public boolean verifyBasePageLoginLink() {
-		System.out.println("verifyBasePageLoginLink.1");
-		WebElement element = driver.findElement(loginLink);
-		System.out.println("verifyBasePageLoginLink.2");
-		return (element.isDisplayed()||element.isEnabled());
+	public void verifyBasePageNavigatePortalText() {
+		Assert.assertTrue(navigatePortalText.isDisplayed()||navigatePortalText.isEnabled());
 	}
 	
-	public boolean verifyBasePageWelcomeToPortalText() {
-		System.out.println("verifyBasePageWelcomeToPortalText.1");
-		WebElement element = driver.findElement(welcometoPortalText);
-		System.out.println("verifyBasePageWelcomeToPortalText.2");
-		return (element.isDisplayed()||element.isEnabled());
+	public void verifyBasePageSubmitButton() {
+		Assert.assertTrue(basePageSubmitButton.isDisplayed()||basePageSubmitButton.isEnabled());
 	}
-	
-	public boolean verifyBasePageNavigatePortalText() {
-		System.out.println("verifyBasePageNavigatePortalText.1");
-		WebElement element = driver.findElement(navigatePortalText);
-		System.out.println("verifyBasePageNavigatePortalText.2");
-		return (element.isDisplayed()||element.isEnabled());
-	}
-	
 	
 }

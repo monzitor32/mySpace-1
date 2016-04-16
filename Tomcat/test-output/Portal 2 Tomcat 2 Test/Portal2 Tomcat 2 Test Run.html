@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Portal2 Tomcat 2 Test Run</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 15 06:32:42 AEST 2016</td>
+<td>Started on:</td><td>Sat Apr 16 23:49:25 AEST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>31 seconds (31268 ms)</td>
+<tr><td>Total time:</td><td>18 seconds (18420 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,104 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.lh.common.tests.NewLodgementPageTomcatTest.verifyNewLodgementPageTitle()'><b>verifyNewLodgementPageTitle</b><br>Test class: com.lh.common.tests.NewLodgementPageTomcatTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@id=&apos;NewLodgementMenuText&apos;]&quot;}
-Command duration or timeout: 32 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:03:33&apos;
-System info: host: &apos;biggy&apos;, ip: &apos;192.168.1.56&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=41.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d2495ccb-b95e-442c-a47f-5d0a241f9c4c
-*** Element info: {Using=xpath, value=//span[@id=&apos;NewLodgementMenuText&apos;]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.lh.common.pageobjects.SignInPageTomcat.clickonNewLodgementLink(SignInPageTomcat.java:78)
-	at com.lh.common.tests.NewLodgementPageTomcatTest.verifyNewLodgementPageTitle(NewLodgementPageTomcatTest.java:82)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@id=&apos;NewLodgementMenuText&apos;]&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:03:33&apos;
-System info: host: &apos;biggy&apos;, ip: &apos;192.168.1.56&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/mcs/AppData/Local/Temp/anonymous3573047924813692875webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/mcs/AppData/Local/Temp/anonymous3573047924813692875webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10732)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/mcs/AppData/Local/Temp/anonymous3573047924813692875webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12614)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/mcs/AppData/Local/Temp/anonymous3573047924813692875webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12619)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/mcs/AppData/Local/Temp/anonymous3573047924813692875webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12561)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace384617262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace384617262'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@id=&apos;NewLodgementMenuText&apos;]&quot;}
-Command duration or timeout: 32 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:03:33&apos;
-System info: host: &apos;biggy&apos;, ip: &apos;192.168.1.56&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=41.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d2495ccb-b95e-442c-a47f-5d0a241f9c4c
-*** Element info: {Using=xpath, value=//span[@id=&apos;NewLodgementMenuText&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.lh.common.pageobjects.SignInPageTomcat.clickonNewLodgementLink(SignInPageTomcat.java:78)
-	at com.lh.common.tests.NewLodgementPageTomcatTest.verifyNewLodgementPageTitle(NewLodgementPageTomcatTest.java:82)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@id=&apos;NewLodgementMenuText&apos;]&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:03:33&apos;
-System info: host: &apos;biggy&apos;, ip: &apos;192.168.1.56&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/mcs/AppData/Local/Temp/anonymous3573047924813692875webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/mcs/AppData/Local/Temp/anonymous3573047924813692875webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10732)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/mcs/AppData/Local/Temp/anonymous3573047924813692875webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12614)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/mcs/AppData/Local/Temp/anonymous3573047924813692875webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12619)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/mcs/AppData/Local/Temp/anonymous3573047924813692875webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12561)
-</pre></div></td>
-<td>0</td>
-<td>com.lh.common.tests.NewLodgementPageTomcatTest@39c0f4a</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -173,15 +75,50 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.lh.common.tests.NewLodgementPageTomcatTest.verifyChangeEmailPage()'><b>verifyChangeEmailPage</b><br>Test class: com.lh.common.tests.NewLodgementPageTomcatTest</td>
+<td title='com.lh.common.tests.BasePageTomcatTest.verifyBasePageCreateAccountLink()'><b>verifyBasePageCreateAccountLink</b><br>Test class: com.lh.common.tests.BasePageTomcatTest</td>
 <td></td>
-<td>9</td>
-<td>com.lh.common.tests.NewLodgementPageTomcatTest@39c0f4a</td></tr>
+<td>0</td>
+<td>com.lh.common.tests.BasePageTomcatTest@39c0f4a</td></tr>
 <tr>
-<td title='com.lh.common.tests.NewLodgementPageTomcatTest.verifyNewLodgementCFL()'><b>verifyNewLodgementCFL</b><br>Test class: com.lh.common.tests.NewLodgementPageTomcatTest</td>
+<td title='com.lh.common.tests.BasePageTomcatTest.verifyBasePageHelpLink()'><b>verifyBasePageHelpLink</b><br>Test class: com.lh.common.tests.BasePageTomcatTest</td>
 <td></td>
-<td>7</td>
-<td>com.lh.common.tests.NewLodgementPageTomcatTest@39c0f4a</td></tr>
+<td>0</td>
+<td>com.lh.common.tests.BasePageTomcatTest@39c0f4a</td></tr>
+<tr>
+<td title='com.lh.common.tests.BasePageTomcatTest.verifyBasePageHomeLink()'><b>verifyBasePageHomeLink</b><br>Test class: com.lh.common.tests.BasePageTomcatTest</td>
+<td></td>
+<td>0</td>
+<td>com.lh.common.tests.BasePageTomcatTest@39c0f4a</td></tr>
+<tr>
+<td title='com.lh.common.tests.BasePageTomcatTest.verifyBasePageLoginLink()'><b>verifyBasePageLoginLink</b><br>Test class: com.lh.common.tests.BasePageTomcatTest</td>
+<td></td>
+<td>0</td>
+<td>com.lh.common.tests.BasePageTomcatTest@39c0f4a</td></tr>
+<tr>
+<td title='com.lh.common.tests.BasePageTomcatTest.verifyBasePageNavigatePortalText()'><b>verifyBasePageNavigatePortalText</b><br>Test class: com.lh.common.tests.BasePageTomcatTest</td>
+<td></td>
+<td>0</td>
+<td>com.lh.common.tests.BasePageTomcatTest@39c0f4a</td></tr>
+<tr>
+<td title='com.lh.common.tests.BasePageTomcatTest.verifyBasePageResetPasswordLink()'><b>verifyBasePageResetPasswordLink</b><br>Test class: com.lh.common.tests.BasePageTomcatTest</td>
+<td></td>
+<td>0</td>
+<td>com.lh.common.tests.BasePageTomcatTest@39c0f4a</td></tr>
+<tr>
+<td title='com.lh.common.tests.BasePageTomcatTest.verifyBasePageSubmitButton()'><b>verifyBasePageSubmitButton</b><br>Test class: com.lh.common.tests.BasePageTomcatTest</td>
+<td></td>
+<td>0</td>
+<td>com.lh.common.tests.BasePageTomcatTest@39c0f4a</td></tr>
+<tr>
+<td title='com.lh.common.tests.BasePageTomcatTest.verifyBasePageWelcomeToPortalText()'><b>verifyBasePageWelcomeToPortalText</b><br>Test class: com.lh.common.tests.BasePageTomcatTest</td>
+<td></td>
+<td>0</td>
+<td>com.lh.common.tests.BasePageTomcatTest@39c0f4a</td></tr>
+<tr>
+<td title='com.lh.common.tests.BasePageTomcatTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.lh.common.tests.BasePageTomcatTest</td>
+<td></td>
+<td>0</td>
+<td>com.lh.common.tests.BasePageTomcatTest@39c0f4a</td></tr>
 </table><p>
 </body>
 </html>

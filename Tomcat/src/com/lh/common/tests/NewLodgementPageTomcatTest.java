@@ -22,6 +22,7 @@ import com.lh.common.pageobjects.CFLApplicantDetailsTomcat;
 import lh.com.utility.Log;
 
 public class NewLodgementPageTomcatTest extends TestBaseSetup {
+	
 	private WebDriver driver;
 	private SignInPageTomcat signInPageTomcat;
 	private BasePageTomcat basePageTomcat;
@@ -145,7 +146,7 @@ public class NewLodgementPageTomcatTest extends TestBaseSetup {
 //			System.out.println("END OF TEST");
 			
 			
-			cflApplicantDetailsTomcat  = newLodgementPageTomcat.clickOnSubmitButton();
+			///////cflApplicantDetailsTomcat  = newLodgementPageTomcat.clickOnSubmitButton();
 			
 			Thread.sleep(2000);
 			

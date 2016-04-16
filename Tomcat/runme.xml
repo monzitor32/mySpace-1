@@ -14,6 +14,8 @@
     						make these changes and  push them to master.
     						
     						19:00 making some more changes to this form detail.
+    							working on the new lodgement forms
+    							
     	
     	
     	<class name="com.lh.common.tests.BasePageTomcatTest"/>
@@ -21,11 +23,15 @@
     	<class name="com.lh.common.tests.MyActivitiesPageTomcatTest"/>
     	<class name="com.lh.common.tests.AccountProfilePageTomcatTest"/>
     	<class name="com.lh.common.tests.ChangeEmailPageTomcatTest"/>
-    	
+    	 
+    	 <class name="com.lh.common.tests.NewLodgementPageTomcatTest"/>
+    	 
+    	 
+    	 
 -->    	
 
     	
-    	 <class name="com.lh.common.tests.NewLodgementPageTomcatTest"/>
+    	 <class name="com.lh.common.tests.BasePageTomcatTest"/>
 
     	
 <!--
